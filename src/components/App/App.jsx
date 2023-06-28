@@ -20,6 +20,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 
+
+
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactsList from 'components/ContactsList/ContactsList';
 import Filter from 'components/Filter/Filter';
@@ -29,7 +31,8 @@ import { ToastContainer } from 'react-toastify';
 import { Container, TitleForm, TitleContacts, Info } from './App.styled';
 
 const App = () => {
-  const dispatch = useDispatch();
+  // const contacts = useSelector(selectContacts);
+   const dispatch = useDispatch();
   const { items, isLoading, error } = useSelector(selectContacts);
 
   useEffect(() => {

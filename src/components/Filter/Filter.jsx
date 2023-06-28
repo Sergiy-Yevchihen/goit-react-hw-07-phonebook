@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from 'redux/selectors';
 import { filter } from 'redux/contactsSlice';
 
+
 import { Wrapper, LabelForm, InputForm } from './Filter.styled';
 
 const Filter = () => {

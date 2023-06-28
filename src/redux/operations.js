@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'https://6452299ea2860c9ed4038ee9.mockapi.io/';
+axios.defaults.baseURL = 'https://649c32ec048075719237ac7a.mockapi.io';
 axios.defaults.params = {
   headers: { 'content-type': 'application/json' },
 };
