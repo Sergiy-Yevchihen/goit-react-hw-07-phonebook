@@ -1,7 +1,7 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 
 import { fetchContacts, deleteContact, addContact } from './operations';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const initialState = {
@@ -19,16 +19,9 @@ const fetchContactsSuccessReducer = ({ contacts }, { payload }) => {
   contacts.items = payload;
 };
 const addContactSuccessReducer = ({ contacts }, { payload }) => {
-  const duplicate = contacts.items.some(
-    contact => contact.name.toLowerCase() === payload.name.toLowerCase().trim()
-  );
-  if (duplicate) {
-    toast.warn(`${payload.name} is already in contacts.`, {
-      theme: 'colored',
-    });
-  } else {
-    contacts.items.push(payload);
-  }
+  
+  contacts.items.push(payload);
+  
 };
 const deleteContactSuccessReducer = ({ contacts }, { payload }) => {
   contacts.items = contacts.items.filter(contact => contact.id !== payload.id);
